@@ -1,0 +1,47 @@
+.features__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.features__item {
+  display: block;
+  width: 270px;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: $port_buttons_and_team_background;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+$features_pic: 'antenna', 'clock', 'diagram', 'astronaut';
+
+@each $icons in $features_pic {
+  .features__#{$icons}::before {
+    background-image: url('../images/features/#{$icons}.svg');
+  }
+}
+
+.features__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.features__header {
+  font-style: normal;
+  font-weight: 700;
+  font-size: $main_text_size;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.features__text {
+  line-height: 1.71;
+  color: $mail_phone_desc;
+}
