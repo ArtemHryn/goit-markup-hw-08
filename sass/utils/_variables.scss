@@ -11,7 +11,10 @@
   $social_icon_color: #afb1b8;
   $animation: cubic-bezier(0.4, 0, 0.2, 1);
   $gradient-hero-color: rgba(47, 48, 58, 0.4);
+  $mobile_divide_social_line: rgba(33, 33, 33, 0.2);
+  $hero_button_hover: #188ce8;
 
+/* desktop font-size*/
   $additional_header_size: 36px;
   $main_text_size: 14px;
   $button_text_size: 16px;
@@ -20,3 +23,12 @@
   $form_label_text: 12px;
   $card_text: 18px;
   $team_and_card: 16px;
+
+/*mobile font-size*/
+  $logo_size: 24px;
+  $mobile_menu: 40px;
+  $mobile_contact: 34px;
+  $mobile_social_links: 18px;
+  $mobile_hero_header: 26px;
+  $mobile_main_text_size: 14px;
+  $mobile_team_header: 28px;

@@ -8,16 +8,6 @@
   letter-spacing: 0.03em;
   padding-top: 24px;
   padding-bottom: 24px;
-
-  @media screen and (min-width:480px) and (max-width:1199px)  {
-    font-size: $logo_size;
-    padding-top: 16px;
-    padding-bottom: 16px;      
-  }
-  @media screen and (min-width:768px) {
-    padding-top: 26px;
-    padding-bottom: 26px;
-  }
 }
 
 .logo_2nd-part {

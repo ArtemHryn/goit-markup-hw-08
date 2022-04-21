@@ -1,34 +1,28 @@
 .hero {
+  max-width: 1600px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   text-align: center;
-  max-width: 1600px;
   background: linear-gradient($gradient-hero-color, $gradient-hero-color),
     url('../images/header-background.jpg');
   background-repeat: no-repeat;
   background-color: $hero_background;
-  padding-top: 118px;
-  padding-bottom: 118px;
-  background-size: cover;
-  background-position: center;
 }
 
 .hero__text {
-  width: 360px;
+  width: 696px;
+  color: $white_color;
   font-weight: 900;
-  font-size: $mobile_hero_header;
-  line-height: 1.61;
+  font-size: $hero_header;
+  line-height: 1.36;
+  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
-  color: $white_color;
   margin: 0 auto 30px;
-
-  @media screen and (min-width: 1200px) {
-    font-size: $hero_header;
-    line-height: 1.36;
-    width: 696px;
-  }
 }
 
 .hero__button {
@@ -47,12 +41,7 @@
   border: none;
   transition: background-color 250ms $animation;
 
-  @media screen and (min-width:1200px) {
-      
-  }
-
-  &:focus,
-  &:hover {
-    background-color: #188ce8;
+  &:focus, &:hover {
+    background-color: $hero_button_hover;
   }
 }

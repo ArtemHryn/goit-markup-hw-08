@@ -1,61 +1,66 @@
 .team {
+  display: flex;
+  flex-direction: column;
   background-color: $port_buttons_and_team_background;
 }
 
 .team__header {
   font-weight: 700;
-  font-size: $mobile_team_header;
-  line-height: 1.17;
-
+  font-size: $additional_header_size;
+  line-height: 1.16;
   text-align: center;
-  letter-spacing: 0.03em;
-
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .team__list {
+  display: flex;
 }
 
 .team__item {
-  text-align: center;
+  background-color: $white_color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  background-color: $white_color;
+  margin-right: 30px;
 }
 
-.team_img {
-  width: 100%;
+.team__item:last-child {
+  margin-right: 0;
 }
 
 .team__meta {
-  padding: 30px 122px 24px;
+  padding: 30px 32px;
 }
+
 .team__name {
-  margin-bottom: 10px;
   font-weight: 500;
   font-size: $team_and_card;
-  line-height: 1.19;
+  line-height: 1.18;
   text-align: center;
-  letter-spacing: 0.03em;
-
-  color: $main_color;
+  margin-bottom: 10px;
 }
+
 .team__position {
-  margin-bottom: 16px;
+  font-weight: 400;
   font-size: $team_and_card;
-  line-height: 1.19;
+  line-height: 1.18;
   text-align: center;
-  letter-spacing: 0.03em;
-
   color: $mail_phone_desc;
+  margin-bottom: 16px;
 }
+
 .team-social__list {
   display: flex;
 }
-.team-social__item:not(:last-child) {
+
+.team-social__item {
   margin-right: 10px;
 }
+
+.team-social__item:last-child {
+  margin-right: 0;
+}
+
 .team-social__link {
   display: flex;
   width: 44px;
@@ -64,7 +69,16 @@
   justify-content: center;
 
   color: $social_icon_color;
+
+  transition: color 250ms $animation, background-color 250ms $animation;
+
+  &:hover, &:focus {
+    background-color: $web_hover_button_color;
+    border-radius: 50px;
+    color: $white_color;
+  }
 }
+
 .team-social__icon {
-    fill: currentColor
+  fill: currentColor;
 }

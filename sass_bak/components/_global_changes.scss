@@ -9,9 +9,9 @@ html {
 }
 
 .lists {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
 }
 
 body {
@@ -57,17 +57,13 @@ button {
 }
 
 .container {
+  width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  max-width: 1200px;
 }
+
 .section {
-  @media screen and (min-width: 480px) {
-    padding: 60px 0;
-  }
-  @media screen and (min-width: 1200px) {
-    padding: 94px 0;
-  }
+  padding: 94px 0;
 }
 
 .portfolio__container {

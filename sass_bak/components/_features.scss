@@ -1,9 +1,16 @@
+.features__list {
+  display: flex;
+  flex-direction: row;
+}
+
 .features__item {
   display: block;
+  width: 270px;
 
   &:before {
     content: '';
     display: block;
+    width: 270px;
     height: 120px;
     margin-bottom: 30px;
 
@@ -22,16 +29,16 @@ $features_pic: 'antenna', 'clock', 'diagram', 'astronaut';
 }
 
 .features__item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-right: 30px;
 }
 
 .features__header {
+  font-style: normal;
   font-weight: 700;
-  font-size: $mobile_main_text_size;
+  font-size: $main_text_size;
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
-  text-align: center;
 }
 
 .features__text {

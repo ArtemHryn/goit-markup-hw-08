@@ -22,34 +22,51 @@
     <!--Навигация-->
     <header class="header">
       <div class="container header__container">
-        <nav class="navigation">
-          <a href="index.html" class="logo"
-            >Web<span class="logo_2nd-part">Studio</span></a
-          >
+        <a href="index.html" class="logo">Web<span class="logo_2nd-part">Studio</span></a>
+        <button class="header-button" menu-button>
+          <svg class="header-button__icon" width="24" height="16">
+            <use href="./images/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <nav class="navigation is-hidden" mob-menu>
           <ul class="navigation-menu lists">
-            <li class="navigation-menu__item"><a href="index.html" class="navigation-menu__link navigation-menu__link--active">Студия</a></li>
-            <li class="navigation-menu__item"><a href="./portfolio.html" class="navigation-menu__link">Портфолио</a></li>
-            <li class="navigation-menu__item"><a href="/" class="navigation-menu__link">Контакты</a></li>
+            <li class="navigation-menu__item">
+              <a href="index.html" class="navigation-menu__link navigation-menu__link--active"
+                >Студия</a
+              >
+            </li>
+            <li class="navigation-menu__item">
+              <a href="./portfolio.html" class="navigation-menu__link">Портфолио</a>
+            </li>
+            <li class="navigation-menu__item">
+              <a href="/" class="navigation-menu__link">Контакты</a>
+            </li>
+          </ul>
+          <ul class="contact-list lists">
+            <li class="contact-list__item">
+              <a href="mailto:info@devstudio.com" class="contact-list__link">
+                <svg class="contact-list__email-icon" width="16" height="12">
+                  <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="contact-list-item">
+              <a href="tel:+38096111111" class="contact-list__link">
+                <svg class="contact-list__phone-icon" width="10" height="16">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+          <ul class="navigation-social lists">
+            <li class="navigation-social__item"><a href="" class="navigation-social__link">Instagram</a></li>
+            <li class="navigation-social__item"><a href="" class="navigation-social__link">Twitter</a></li>
+            <li class="navigation-social__item"><a href="" class="navigation-social__link">Facebook</a></li>
+            <li class="navigation-social__item"><a href="" class="navigation-social__link">LinkedIn</a></li>
           </ul>
         </nav>
-        <ul class="contact-list lists">
-          <li class="contact-list__item">
-            <a href="mailto:info@devstudio.com" class="contact-list__link">
-              <svg class="contact-list__email-icon">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contact-list-item">
-            <a href="tel:+38096111111" class="contact-list__link">
-              <svg class="contact-list__phone-icon">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
       </div>
     </header>
     <!--разметка основной части главной страницы-->
@@ -119,7 +136,7 @@
           <h2 class="team__header">Наша команда</h2>
           <ul class="team__list lists">
             <li class="team__item">
-              <img src="images/team/igor.jpg" alt="Product Designer" width="270" class="img" />
+              <img src="images/team/igor.jpg" alt="Product Designer" width="270" class="team_img img" />
               <div class="team__meta">
                 <h3 class="team__name">Игорь Демьяненко</h3>
                 <p class="team__position" lang="en">Product Designer</p>
@@ -156,7 +173,7 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="images/team/olga.jpg" alt="Ольга Репина" width="270" class="img"/>
+              <img src="images/team/olga.jpg" alt="Ольга Репина" width="270" class="team_img img" />
               <div class="team__meta">
                 <h3 class="team__name">Ольга Репина</h3>
                 <p class="team__position" lang="en">Frontend Developer</p>
@@ -193,7 +210,7 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="images/team/nico.jpg" alt="Николай Тарасов" width="270" class="img"/>
+              <img src="images/team/nico.jpg" alt="Николай Тарасов" width="270" class="team_img img" />
               <div class="team__meta">
                 <h3 class="team__name">Николай Тарасов</h3>
                 <p class="team__position" lang="en">Marketing</p>
@@ -230,7 +247,7 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="images/team/mike.jpg" alt="Михаил Ермаков" width="270" class="img"/>
+              <img src="images/team/mike.jpg" alt="Михаил Ермаков" width="270" class="team_img img" />
               <div class="team__meta">
                 <h3 class="team__name">Михаил Ермаков</h3>
                 <p class="team__position" lang="en">UI Designer</p>
@@ -324,20 +341,23 @@
         <div class="modal">
           <p class="modal__header">Оставьте свои данные, мы вам перезвоним</p>
           <form class="form">
-            <label class="form__label">Имя
-              <input type="text" class="form__input"/>
+            <label class="form__label"
+              >Имя
+              <input type="text" class="form__input" />
               <svg class="form__icon">
                 <use href="./images/modal-icons.svg#icon-person" width="18"></use>
               </svg>
             </label>
-            <label class="form__label">Телефон
-              <input type="text" class="form__input"/>
+            <label class="form__label"
+              >Телефон
+              <input type="text" class="form__input" />
               <svg class="form__icon">
                 <use href="./images/modal-icons.svg#icon-phone" width="18"></use>
               </svg>
             </label>
-            <label class="form__label">Почта
-              <input type="text" class="form__input"/>
+            <label class="form__label"
+              >Почта
+              <input type="text" class="form__input" />
               <svg class="form__icon">
                 <use href="./images/modal-icons.svg#icon-email" width="18"></use>
               </svg>
@@ -368,12 +388,10 @@
       </div>
     </main>
     <!--контакты-->
-    <footer class="footer">
+    <footer class="footer section">
       <div class="container footer__container">
         <div class="footer-addres-block">
-          <a href="index.html" class="logo"
-            >Web<span class="footer__logo">Studio</span></a
-          >
+          <a href="index.html" class="logo">Web<span class="footer__logo">Studio</span></a>
           <address class="address">
             <ul class="address__list lists">
               <li class="address__item">
@@ -431,9 +449,10 @@
           <strong class="mailing__header">Подпишитесь на рассылку</strong>
           <form class="mailing__form">
             <input placeholder="E-mail" class="mailing__input" />
-            <button type="submit" class="mailing__button">Подписаться
+            <button type="submit" class="mailing__button">
+              Подписаться
               <svg class="mailing__icon" width="24px">
-                <use href="./images/icon_send.svg#icon-icon_send"></use>
+                <use href="./images/sprite.svg#icon-icon_send"></use>
               </svg>
             </button>
           </form>
@@ -441,5 +460,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
