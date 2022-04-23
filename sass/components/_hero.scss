@@ -3,14 +3,16 @@
   margin-right: auto;
   text-align: center;
   max-width: 1600px;
-  background-repeat: no-repeat;
   background-color: $hero_background;
   padding-top: 118px;
   padding-bottom: 118px;
-  background-size: cover;
-  background-position: center;
-  background: linear-gradient($gradient-hero-color, $gradient-hero-color),
-    url('../images/background/header-mini.jpg');
+  @media (min-device-pixel-ratio: 1), (min-resolution: 96dpi), (min-resolution: 1dppx) {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: linear-gradient($gradient-hero-color, $gradient-hero-color),
+      url('../images/background/header-mini.jpg');
+  }
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background: linear-gradient($gradient-hero-color, $gradient-hero-color),
       url('../images/background/header-mini@2x.jpg');

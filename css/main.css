@@ -131,6 +131,7 @@ button {
   .logo {
     padding-top: 26px;
     padding-bottom: 26px;
+    margin-right: 88px;
   }
 }
 
@@ -199,42 +200,128 @@ button {
   }
 }
 
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 767.5px) {
+  .navigation {
+    position: fixed;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 48px 40px;
+    z-index: 10;
+  }
+}
+
 @media screen and (max-width: 767.5px) {
   .navigation.is-hidden {
     display: none;
   }
-  .navigation {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    padding: 48px 40px;
-    z-index: 10;
-  }
+}
+
+@media screen and (min-width: 768px) {
   .navigation-menu {
-    margin-bottom: 302px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
+}
+
+@media screen and (max-width: 767.5px) {
   .navigation-menu__item:not(:last-child) {
     margin-bottom: 12px;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation-menu__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.navigation-menu__link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #212121;
+  letter-spacing: 0.02em;
+}
+
+.navigation-menu__link:hover, .navigation-menu__link:focus {
+  color: #2196f3;
+}
+
+@media screen and (max-width: 767.5px) {
   .navigation-menu__link {
-    font-weight: 500;
     font-size: 40px;
     line-height: 1.18;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    color: #212121;
   }
-  .navigation-menu__link:hover, .navigation-menu__link:focus {
-    color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation-menu__link {
+    font-size: 14px;
+    line-height: 1.14;
   }
+}
+
+/* contacts */
+.contact-container {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 767.5px) {
   .contact-list {
     margin-bottom: 64px;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767.5px) {
   .contact-list__item:first-child {
     margin-bottom: 12px;
   }
+}
+
+@media screen and (max-width: 767.5px) {
   .contact-list__link {
     font-weight: 500;
     font-size: 34px;
@@ -246,6 +333,9 @@ button {
   .contact-list__link:hover, .contact-list__link:focus {
     color: #2196f3;
   }
+}
+
+@media screen and (max-width: 767.5px) {
   .contact-list__email-icon,
   .contact-list__phone-icon {
     display: none;
@@ -334,14 +424,19 @@ button {
   margin-right: auto;
   text-align: center;
   max-width: 1600px;
-  background-repeat: no-repeat;
   background-color: #c4c4c4;
   padding-top: 118px;
   padding-bottom: 118px;
-  background-size: cover;
-  background-position: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/background/header-mini.jpg");
-  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background/header-mini.jpg");
+}
+
+@media (min-device-pixel-ratio: 1), (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dpi), (min-resolution: 1dppx) {
+  .hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/background/header-mini.jpg");
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background/header-mini.jpg");
+  }
 }
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -546,6 +641,7 @@ button {
   letter-spacing: 0.03em;
   text-align: center;
   color: #212121;
+  margin-bottom: 30px;
 }
 
 .customers__list {
@@ -596,6 +692,7 @@ button {
 .address__phone {
   font-size: 14px;
   line-height: 1.71;
+  font-style: normal;
   text-align: center;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
