@@ -22,6 +22,9 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: $white_color;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .team_img {
@@ -62,9 +65,17 @@
   height: 44px;
   align-items: center;
   justify-content: center;
-
+  border-radius: 50px;
   color: $social_icon_color;
+
+  transition: color 250ms $animation, background-color 250ms $animation;
+
+  &:hover,
+  &:focus {
+    background-color: $web_hover_button_color;
+    color: $white_color;
+  }
 }
 .team-social__icon {
-    fill: currentColor
+  fill: currentColor;
 }

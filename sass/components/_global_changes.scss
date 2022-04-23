@@ -59,14 +59,14 @@ button {
 .container {
   padding: 0 15px;
   margin: 0 auto;
-  max-width: 1200px;
-}
-.section {
-  @media screen and (min-width: 480px) {
-    padding: 60px 0;
+  @media screen and (min-width:$mobile_min) {
+    max-width: $mobile_min;
   }
-  @media screen and (min-width: 1200px) {
-    padding: 94px 0;
+  @media screen and (min-width:$tables_min) {
+    max-width: $tables_min;
+  }
+  @media screen and (min-width:$desktop) {
+    max-width: $desktop;
   }
 }
 
@@ -74,4 +74,11 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.section {
+  padding: 94px 0;
+  @media  screen and (max-width:1199px) {
+    padding: 60px 0;
+  }
 }

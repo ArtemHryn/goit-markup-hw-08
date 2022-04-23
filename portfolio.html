@@ -17,34 +17,64 @@
     <!--Навигация-->
     <header class="header">
       <div class="container header__container">
-        <nav class="navigation">
-          <a href="index.html" class="logo"
-            >Web<span class="logo_2nd-part">Studio</span></a
-          >
+        <a href="index.html" class="logo">Web<span class="logo_2nd-part">Studio</span></a>
+        <button class="header-button" menu-button>
+          <svg class="header-button__icon" width="24" height="16">
+            <use href="./images/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <nav class="navigation is-hidden" mob-menu>
           <ul class="navigation-menu lists">
-            <li class="navigation-menu__item"><a href="index.html" class="navigation-menu__link">Студия</a></li>
-            <li class="navigation-menu__item"><a href="./portfolio.html" class="navigation-menu__link navigation-menu__link--active">Портфолио</a></li>
-            <li class="navigation-menu__item"><a href="/" class="navigation-menu__link">Контакты</a></li>
+            <li class="navigation-menu__item">
+              <a href="index.html" class="navigation-menu__link">Студия</a>
+            </li>
+            <li class="navigation-menu__item">
+              <a href="./portfolio.html" class="navigation-menu__link navigation-menu__link--active"
+                >Портфолио</a
+              >
+            </li>
+            <li class="navigation-menu__item">
+              <a href="/" class="navigation-menu__link">Контакты</a>
+            </li>
           </ul>
+          <ul class="contact-list lists">
+            <li class="contact-list__item">
+              <a href="mailto:info@devstudio.com" class="contact-list__link">
+                <svg class="contact-list__email-icon" width="16" height="12">
+                  <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="contact-list-item">
+              <a href="tel:+38096111111" class="contact-list__link">
+                <svg class="contact-list__phone-icon" width="10" height="16">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+          <ul class="navigation-social lists">
+            <li class="navigation-social__item">
+              <a href="" class="navigation-social__link">Instagram</a>
+            </li>
+            <li class="navigation-social__item">
+              <a href="" class="navigation-social__link">Twitter</a>
+            </li>
+            <li class="navigation-social__item">
+              <a href="" class="navigation-social__link">Facebook</a>
+            </li>
+            <li class="navigation-social__item">
+              <a href="" class="navigation-social__link">LinkedIn</a>
+            </li>
+          </ul>
+          <button class="navigation-social__button" menu-button-close>
+            <svg class="navigation-social__close-icon" width="18.6" height="18.6">
+              <use href="./images/sprite.svg#icon-close_menu"></use>
+            </svg>
+          </button>
         </nav>
-        <ul class="contact-list lists">
-          <li class="contact-list__item">
-            <a href="mailto:info@devstudio.com" class="contact-list__link">
-              <svg class="contact-list__email-icon">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contact-list-item">
-            <a href="tel:+38096111111" class="contact-list__link">
-              <svg class="contact-list__phone-icon">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
       </div>
     </header>
     <!--Основная часть сайта-->
@@ -71,12 +101,36 @@
               <button type="button" class="filter__button">Маркетинг</button>
             </li>
           </ul>
+          <!--Карточки товаров-->
           <ul class="card-set lists">
-            <!--Карточки товаров-->
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="card__description">
-                  <img src="images/portfolio/technocr.jpg" alt="Технокряк" width="370" class="img"/>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/technocr-desktop.jpg    1x,
+                        ./images/portfolio/technocr-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/technocr-tablet.jpg    1x,
+                        ./images/portfolio/technocr-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/technocr-mobile.jpg    1x,
+                        ./images/portfolio/technocr-mobile@2x.jpg 2x
+                      "
+                      alt="Технокряк"
+                      class="img"
+                      src="./images/portfolio/technocr-desktop@2x.jpg"
+                    />
+                  </picture>
                   <p class="card__text is-hidden-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -92,7 +146,31 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="card__description">
-                  <img src="images/portfolio/basketball.jpg" alt="basketball" width="370" class="img"/>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/basketball-desktop.jpg    1x,
+                        ./images/portfolio/basketball-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/basketball-tablet.jpg    1x,
+                        ./images/portfolio/basketball-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/basketball-mobile.jpg    1x,
+                        ./images/portfolio/basketball-mobile@2x.jpg 2x
+                      "
+                      alt="Технокряк"
+                      class="img"
+                      src="./images/portfolio/basketball-desktop@2x.jpg"
+                    />
+                  </picture>
                   <p class="card__text is-hidden-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -108,7 +186,31 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="card__description">
-                  <img src="images/portfolio/seefood.jpg" alt="Seafood" width="370" class="img"/>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/seafood-desktop.jpg    1x,
+                        ./images/portfolio/seafood-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/seafood-tablet.jpg    1x,
+                        ./images/portfolio/seafood-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/seafood-mobile.jpg    1x,
+                        ./images/portfolio/seafood-mobile@2x.jpg 2x
+                      "
+                      alt="Технокряк"
+                      class="img"
+                      src="./images/portfolio/seafood-desktop@2x.jpg"
+                    />
+                  </picture>
                   <p class="card__text is-hidden-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -124,7 +226,31 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="card__description">
-                  <img src="images/portfolio/hearphone.jpg" alt="hearphone" width="370" class="img"/>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/hearphone-desktop.jpg    1x,
+                        ./images/portfolio/hearphone-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/hearphone-tablet.jpg    1x,
+                        ./images/portfolio/hearphone-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/hearphone-mobile.jpg    1x,
+                        ./images/portfolio/hearphone-mobile@2x.jpg 2x
+                      "
+                      alt="Технокряк"
+                      class="img"
+                      src="./images/portfolio/hearphone-desktop@2x.jpg"
+                    />
+                  </picture>
                   <p class="card__text is-hidden-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -140,7 +266,31 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="card__description">
-                  <img src="images/portfolio/boxes.jpg" alt="boxes" width="370" class="img"/>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/boxes-desktop.jpg    1x,
+                        ./images/portfolio/boxes-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/boxes-tablet.jpg    1x,
+                        ./images/portfolio/boxes-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/boxes-mobile.jpg    1x,
+                        ./images/portfolio/boxes-mobile@2x.jpg 2x
+                      "
+                      alt="Технокряк"
+                      class="img"
+                      src="./images/portfolio/boxes-desktop@2x.jpg"
+                    />
+                  </picture>
                   <p class="card__text is-hidden-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -156,7 +306,31 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="card__description">
-                  <img src="images/portfolio/display.jpg" alt="display" width="370" class="img"/>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/display-desktop.jpg    1x,
+                        ./images/portfolio/display-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/display-tablet.jpg    1x,
+                        ./images/portfolio/display-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/display-mobile.jpg    1x,
+                        ./images/portfolio/display-mobile@2x.jpg 2x
+                      "
+                      alt="Технокряк"
+                      class="img"
+                      src="./images/portfolio/display-desktop@2x.jpg"
+                    />
+                  </picture>
                   <p class="card__text is-hidden-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -172,7 +346,31 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="card__description">
-                  <img src="images/portfolio/book.jpg" alt="book" width="370" class="img"/>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/book-desktop.jpg    1x,
+                        ./images/portfolio/book-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/book-tablet.jpg    1x,
+                        ./images/portfolio/book-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/book-mobile.jpg    1x,
+                        ./images/portfolio/book-mobile@2x.jpg 2x
+                      "
+                      alt="Технокряк"
+                      class="img"
+                      src="./images/portfolio/book-desktop@2x.jpg"
+                    />
+                  </picture>
                   <p class="card__text is-hidden-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -188,7 +386,31 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="card__description">
-                  <img src="images/portfolio/label.jpg" alt="label" width="370" class="img"/>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/label-desktop.jpg    1x,
+                        ./images/portfolio/label-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/label-tablet.jpg    1x,
+                        ./images/portfolio/label-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/label-mobile.jpg    1x,
+                        ./images/portfolio/label-mobile@2x.jpg 2x
+                      "
+                      alt="Технокряк"
+                      class="img"
+                      src="./images/portfolio/label-desktop@2x.jpg"
+                    />
+                  </picture>
                   <p class="card__text is-hidden-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -204,7 +426,31 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="card__description">
-                  <img src="images/portfolio/laptop.jpg" alt="laptop" width="370" class="img"/>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/laptop-desktop.jpg    1x,
+                        ./images/portfolio/laptop-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/laptop-tablet.jpg    1x,
+                        ./images/portfolio/laptop-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/laptop-mobile.jpg    1x,
+                        ./images/portfolio/laptop-mobile@2x.jpg 2x
+                      "
+                      alt="Технокряк"
+                      class="img"
+                      src="./images/portfolio/laptop-desktop@2x.jpg"
+                    />
+                  </picture>
                   <p class="card__text is-hidden-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -222,12 +468,10 @@
       </section>
     </main>
     <!--контакты-->
-    <footer class="footer">
+    <footer class="footer section">
       <div class="container footer__container">
         <div class="footer-addres-block">
-          <a href="index.html" class="logo"
-            >Web<span class="footer__logo">Studio</span></a
-          >
+          <a href="index.html" class="logo">Web<span class="footer__logo">Studio</span></a>
           <address class="address">
             <ul class="address__list lists">
               <li class="address__item">
@@ -285,7 +529,8 @@
           <strong class="mailing__header">Подпишитесь на рассылку</strong>
           <form class="mailing__form">
             <input placeholder="E-mail" class="mailing__input" />
-            <button type="submit" class="mailing__button">Подписаться
+            <button type="submit" class="mailing__button">
+              Подписаться
               <svg class="mailing__icon" width="24px">
                 <use href="./images/icon_send.svg#icon-icon_send"></use>
               </svg>
@@ -294,5 +539,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
