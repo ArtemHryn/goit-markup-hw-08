@@ -4,7 +4,7 @@
 .customers__header {
   font-weight: 700;
   font-size: 28px;
-  line-height: 33px;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
   color: $main_color;
@@ -20,6 +20,9 @@
     width: calc((100% - 60px) / 2);
     margin-right: 30px;
     margin-bottom: 30px;
+    @media screen and (min-width: $tables_min){
+      width: calc((100% - 90px) / 3);
+    }
 }
 .customers__link {
   display: flex;
@@ -28,8 +31,8 @@
   border: 1px solid $social_icon_color;
   box-sizing: border-box;
   border-radius: 4px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color: $social_icon_color;
   &:hover, &:focus {
       border-color: $web_hover_button_color;

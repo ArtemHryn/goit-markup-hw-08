@@ -14,6 +14,12 @@
 }
 
 .team__list {
+  @media screen and (min-width: $tables_min) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
 }
 
 .team__item {
@@ -22,17 +28,17 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: $white_color;
-  &:not(:last-child) {
-    margin-bottom: 30px;
+   margin-bottom: 30px;
+  @media screen and (min-width: $tables_min) {
+    margin-right: 30px;
   }
-}
-
-.team_img {
-  width: 100%;
 }
 
 .team__meta {
   padding: 30px 122px 24px;
+  @media screen and (min-width: $tables_min) {
+    padding: 30px 74px 24px;
+  }
 }
 .team__name {
   margin-bottom: 10px;

@@ -1,6 +1,21 @@
+.card-set {
+  margin-bottom: -30px;
+  @media screen and (min-width: $tables_min) {
+    margin-right: -30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .card-set__item {
   background-color: $white_color;
   margin-bottom: 30px;
+  @media screen and (min-width: $tables_min) {
+    margin-right: 30px;
+    width: calc((100% - 60px) / 2);
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 90px) / 3);
+  }
 }
 .card-set__link {
   display: block;

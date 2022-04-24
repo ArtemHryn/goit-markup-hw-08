@@ -1,5 +1,17 @@
+.features__list {
+  margin-bottom: -30px;
+  @media screen and (min-width: $tables_min) {
+    margin-right: -30px;
+  }
+  display: flex;
+  flex-wrap: wrap;
+}
 .features__item {
-  display: block;
+  margin-bottom: 30px;
+  @media screen and (min-width: $tables_min) {
+    margin-right: 30px;
+    width: 354px;
+  }
 
   &:before {
     content: '';
@@ -21,10 +33,6 @@ $features_pic: 'antenna', 'clock', 'diagram', 'astronaut';
   }
 }
 
-.features__item:not(:last-child) {
-  margin-bottom: 30px;
-}
-
 .features__header {
   font-weight: 700;
   font-size: $mobile_main_text_size;
@@ -32,6 +40,9 @@ $features_pic: 'antenna', 'clock', 'diagram', 'astronaut';
   text-transform: uppercase;
   margin-bottom: 10px;
   text-align: center;
+  @media screen and (min-width: $tables_min) {
+    text-align: left;
+  }
 }
 
 .features__text {

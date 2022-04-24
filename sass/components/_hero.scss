@@ -6,19 +6,49 @@
   background-color: $hero_background;
   padding-top: 118px;
   padding-bottom: 118px;
-  @media (min-device-pixel-ratio: 1), (min-resolution: 96dpi), (min-resolution: 1dppx) {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background: linear-gradient($gradient-hero-color, $gradient-hero-color),
-      url('../images/background/header-mini.jpg');
+  background: linear-gradient($gradient-hero-color, $gradient-hero-color),
+    url('../images/background/header-mini.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media screen and (max-width: $mobile_max) {
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background: linear-gradient($gradient-hero-color, $gradient-hero-color),
+        url('../images/background/header-mini@2x.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
   }
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  @media screen and (min-width: $tables_min) {
     background: linear-gradient($gradient-hero-color, $gradient-hero-color),
-      url('../images/background/header-mini@2x.jpg');
+      url('../images/background/header-normal.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background: linear-gradient($gradient-hero-color, $gradient-hero-color),
+        url('../images/background/header-normal@2x.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    background: linear-gradient($gradient-hero-color, $gradient-hero-color),
+      url('../images/background/header-big.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background: linear-gradient($gradient-hero-color, $gradient-hero-color),
+        url('../images/background/header-big@2x.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
   }
 }
 
@@ -55,9 +85,6 @@
   cursor: pointer;
   border: none;
   transition: background-color 250ms $animation;
-
-  @media screen and (min-width: 1200px) {
-  }
 
   &:focus,
   &:hover {

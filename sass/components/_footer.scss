@@ -5,19 +5,33 @@
 
 .footer__container {
   text-align: center;
+  @media screen and (min-width: $tables_min) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 76px;
+    padding-right: 89px;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
 
-.footer-addres-block {
+.footer-address-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
+.footer_address__logo {
+  @media screen and (min-width: $tables_min) {
+    margin-right: 0;
+    padding: 0;
+  }
+}
 .address {
   margin-top: 20px;
   margin-bottom: 60px;
 }
-.address__list {
-}
 
-.address__item {
+.address__item:not(:last-child) {
   margin-bottom: 8px;
 }
 .address__location {
@@ -27,6 +41,7 @@
   color: $white_color;
   text-decoration: none;
   transition: color 250ms $animation;
+  font-style: normal;
 
   &:hover,
   &:focus {
@@ -83,6 +98,9 @@
   }
 }
 
+.mailing {
+  margin: 0 auto;
+}
 .mailing__header {
   display: block;
   font-weight: 700;
@@ -105,6 +123,9 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   margin-bottom: 20px;
+  @media screen and (min-width: $tables_min) {
+    width: 450px;
+  }
 }
 .mailing__button {
   display: inline-flex;
