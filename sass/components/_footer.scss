@@ -88,6 +88,9 @@
 
   color: $white_color;
   margin-bottom: 20px;
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
 }
 .social__list {
   display: flex;

@@ -1156,6 +1156,12 @@ button {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer_connect {
+    text-align: left;
+  }
+}
+
 .social__list {
   display: -webkit-box;
   display: -ms-flexbox;
