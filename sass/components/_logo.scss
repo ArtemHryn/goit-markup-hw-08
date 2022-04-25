@@ -6,18 +6,22 @@
   line-height: 1.1666;
   color: $web_hover_button_color;
   letter-spacing: 0.03em;
-  padding-top: 24px;
-  padding-bottom: 24px;
 
-  @media screen and (min-width:480px) and (max-width:1199px)  {
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
     font-size: $logo_size;
     padding-top: 16px;
-    padding-bottom: 16px;      
+    padding-bottom: 16px;
   }
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     padding-top: 26px;
     padding-bottom: 26px;
     margin-right: 88px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 94px;
+    line-height: 1.19;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 

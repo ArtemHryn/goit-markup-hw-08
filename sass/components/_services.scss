@@ -1,3 +1,40 @@
+.services__header {
+  font-weight: 700;
+  font-size: $additional_header_size;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.services__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.services__item {
+  position: relative;
+}
+
+.service__text {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: $main_text_size;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white_color;
+}
+
 @media screen and (max-width:1199px) {
     .services {
         display: none;

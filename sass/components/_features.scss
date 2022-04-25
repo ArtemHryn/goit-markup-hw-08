@@ -1,16 +1,23 @@
 .features__list {
   margin-bottom: -30px;
+  display: flex;
+  flex-wrap: wrap;
   @media screen and (min-width: $tables_min) {
     margin-right: -30px;
   }
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 .features__item {
   margin-bottom: 30px;
   @media screen and (min-width: $tables_min) {
     margin-right: 30px;
     width: 354px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 270px;
+    margin-bottom: 0;
   }
 
   &:before {

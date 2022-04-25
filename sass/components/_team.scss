@@ -6,11 +6,13 @@
   font-weight: 700;
   font-size: $mobile_team_header;
   line-height: 1.17;
-
   text-align: center;
   letter-spacing: 0.03em;
-
   margin-bottom: 30px;
+  @media screen and (min-width: $desktop) {
+    font-size: $additional_header_size;
+    margin-bottom: 50px;
+  }
 }
 
 .team__list {
@@ -20,6 +22,9 @@
     margin-right: -30px;
     margin-bottom: -30px;
   }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .team__item {
@@ -28,9 +33,12 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: $white_color;
-   margin-bottom: 30px;
+  margin-bottom: 30px;
   @media screen and (min-width: $tables_min) {
     margin-right: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
   }
 }
 
@@ -38,6 +46,9 @@
   padding: 30px 122px 24px;
   @media screen and (min-width: $tables_min) {
     padding: 30px 74px 24px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 30px 32px;
   }
 }
 .team__name {
@@ -47,7 +58,6 @@
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-
   color: $main_color;
 }
 .team__position {
@@ -56,7 +66,6 @@
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-
   color: $mail_phone_desc;
 }
 .team-social__list {

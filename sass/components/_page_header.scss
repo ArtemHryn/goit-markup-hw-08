@@ -22,6 +22,7 @@
   justify-content: center;
   background-color: transparent;
   margin-left: auto;
+  transition: color 250ms $animation;
 
   &:hover,
   &:focus {
@@ -90,6 +91,7 @@
   font-weight: 500;
   color: $main_color;
   letter-spacing: 0.02em;
+  transition: color 250ms $animation;
   &:hover,
   &:focus {
     color: $web_hover_button_color;
@@ -138,8 +140,9 @@
   @media screen and (min-width: $tables_min) {
     flex-direction: column;
   }
-    @media screen and (min-width: $desktop) {
-      flex-direction: row;
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -150,12 +153,17 @@
   @media screen and (min-width: $tables_min) {
     margin-top: 8px;
   }
+  @media screen and (min-width: $desktop) {
+    margin-top: 0;
+    margin-left: 30px;
+  }
 }
 
 .contact-list__link {
   letter-spacing: 0.02em;
   color: $mail_phone_desc;
   text-decoration: none;
+  transition: color 250ms $animation;
   &:hover,
   &:focus {
     color: $web_hover_button_color;
@@ -172,6 +180,12 @@
     display: flex;
     align-items: center;
   }
+  @media screen and (min-width: $desktop) {
+    font-size: $main_text_size;
+    line-height: 1.14;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contact-list__email-icon,
@@ -182,6 +196,9 @@
   @media screen and (min-width: $tables_min) {
     margin-right: 8px;
     fill: currentColor;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 10px;
   }
 }
 

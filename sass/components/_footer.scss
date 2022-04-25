@@ -13,12 +13,20 @@
     justify-content: space-between;
     align-items: baseline;
   }
+  @media screen and (min-width: $desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .footer-address-block {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media screen and (min-width: $desktop) {
+    align-items: flex-start;
+    margin-right: 70px;
+  }
 }
 .footer_address__logo {
   @media screen and (min-width: $tables_min) {
@@ -29,6 +37,10 @@
 .address {
   margin-top: 20px;
   margin-bottom: 60px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+    text-align: left;
+  }
 }
 
 .address__item:not(:last-child) {
@@ -61,6 +73,9 @@
 
 .footer__social {
   margin-bottom: 60px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 .footer_connect {
   display: block;
@@ -100,6 +115,9 @@
 
 .mailing {
   margin: 0 auto;
+  @media screen and (min-width: $desktop) {
+    margin: 0;
+  }
 }
 .mailing__header {
   display: block;
@@ -111,6 +129,15 @@
   text-transform: uppercase;
   color: $white_color;
   margin-bottom: 20px;
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
+}
+
+.mailing__form {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 }
 
 .mailing__input {
@@ -126,6 +153,12 @@
   @media screen and (min-width: $tables_min) {
     width: 450px;
   }
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    margin-bottom: 0;
+    display: inline-block;
+    margin-right: 12px;
+  }
 }
 .mailing__button {
   display: inline-flex;
@@ -140,6 +173,7 @@
   font-weight: 700;
   font-size: $mobile_button;
   line-height: 1.88;
+  align-items: center;
 }
 .mailing__icon {
   width: 24px;
