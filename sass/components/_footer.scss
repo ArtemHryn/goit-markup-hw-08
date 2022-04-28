@@ -151,6 +151,10 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   margin-bottom: 20px;
+  outline: none;
+  &:focus-within{
+    border-color: $white_color;
+  }
   @media screen and (min-width: $tables_min) {
     width: 450px;
   }

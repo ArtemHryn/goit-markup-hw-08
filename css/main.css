@@ -344,7 +344,7 @@ button {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .navigation-menu__link:hover::after {
+  .navigation-menu__link:hover::after, .navigation-menu__link:focus::after {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
@@ -1265,6 +1265,11 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   margin-bottom: 20px;
+  outline: none;
+}
+
+.mailing__input:focus-within {
+  border-color: #fff;
 }
 
 @media screen and (min-width: 768px) {

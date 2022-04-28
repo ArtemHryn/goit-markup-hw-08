@@ -123,7 +123,7 @@
       transition: transform 250ms $animation;
     }
 
-    &:hover::after {
+    &:hover::after, &:focus::after {
       transform: scale(1);
     }
 
