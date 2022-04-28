@@ -1,12 +1,14 @@
 (() => {
-    const refs = {
-      openmenuBtn: document.querySelector('[menu-button]'),
-      closemenuBtn: document.querySelector('[menu-button-close]'),
-      menu: document.querySelector('[mob-menu]'),
-    };
-    refs.openmenuBtn.addEventListener('click', toggleMenu);
-    refs.closemenuBtn.addEventListener('click', toggleMenu);
-    function toggleMenu() {
-      refs.menu.classList.toggle('is-hidden');
-    }
-  })();
+  const refs = {
+    openModalBtn: document.querySelector('[data-nav-open]'),
+    closeModalBtn: document.querySelector('[data-nav-close]'),
+    modal: document.querySelector('[data-nav]'),
+  };
+
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
+  }
+})();

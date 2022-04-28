@@ -17,8 +17,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
-  height: 609px;
+  max-width: 450px;
+  width: 100%;
+  min-height: 609px;
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 40px;
@@ -30,8 +31,8 @@
   );
 
   @media screen and (min-width: $desktop) {
-    width: 528px;
-    height: 581px;
+    max-width: 528px;
+    min-height: 581px;
   }
 }
 .modal__header {
@@ -45,6 +46,9 @@
   color: $main_color;
 
   margin-bottom: 12px;
+  @media screen and (max-width:479px) {
+    width: 100%;
+  }
   @media screen and (min-width: $desktop) {
     width: 100%;
     line-height: 1.15;
