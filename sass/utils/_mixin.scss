@@ -1,0 +1,32 @@
+@mixin list($fx, $fw, $mr, $mb, $ml, $mt, $m) {
+  display: $fx;
+  flex-wrap: $fw;
+  margin-right: $mr;
+  margin-bottom: $mb;
+  margin-left: $ml;
+  margin-top: $mt;
+  margin: $m;
+}
+
+@mixin item($mr, $mb, $ml, $mt, $m, $q, $gap) {
+  margin-right: $mr;
+  margin-bottom: $mb;
+  margin-left: $ml;
+  margin-top: $mt;
+  margin: $m;
+  flex-basis: calc(100% / #{$q} - #{$gap});
+}
+
+@mixin font($fz, $ff, $fw, $lh, $ls, $c, $ti:left) {
+  font-size: $fz;
+  font-family: $ff;
+  font-weight: $fw;
+  line-height: $lh / $fz;
+  letter-spacing: $ls;
+  color: $c;
+  text-align: $ti;
+}
+
+@mixin section($ptb, $prl) {
+  padding: $ptb $prl;
+}

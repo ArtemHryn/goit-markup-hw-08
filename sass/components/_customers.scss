@@ -1,12 +1,11 @@
-
-
 .customers__header {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1.18;
-  letter-spacing: 0.03em;
-  text-align: center;
-  color: $main_color;
+  @include font(28px, null, 700, 33px, 0.03em, $main_color, center);
+  // font-weight: 700;
+  // font-size: 28px;
+  // line-height: 1.18;
+  // letter-spacing: 0.03em;
+  // text-align: center;
+  // color: $main_color;
   margin-bottom: 30px;
   @media screen and (min-width: $desktop) {
     font-size: $additional_header_size;
@@ -15,21 +14,25 @@
   }
 }
 .customers__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 0;
-  }
+  @include list(flex, wrap, null, null, null, null, -15px);
+  // display: flex;
+  // flex-wrap: wrap;
+  // margin: -15px;
+  // @media screen and (min-width: $desktop) {
+  //   margin-bottom: 0;
+  // }
 }
 .customers__item {
-  width: calc((100% - 60px) / 2);
-  margin: 15px;
+  @include item(null, null, null, null, 15px, $mobq, $gapitem);
+  // width: calc((100% - 60px) / 2);
+  // margin: 15px;
   @media screen and (min-width: $tables_min) {
-    width: calc((100% - 90px) / 3);
+    @include item(null, null, null, null, 15px, $tabq, $gapitem);
+    // width: calc((100% - 90px) / 3);
   }
   @media screen and (min-width: $desktop) {
-    width: calc((100% - 180px) / 6);
+    @include item(null, null, null, null, 15px, $deskq, $gapitem);
+    //   width: calc((100% - 180px) / 6);
   }
 }
 .customers__link {
