@@ -30,3 +30,9 @@
 @mixin section($ptb, $prl) {
   padding: $ptb $prl;
 }
+
+@mixin transitionnew($one, $two, $three, $funk, $time) {
+  transition-timing-function: $funk;
+  transition-duration: $time;
+  transition-property: $one, $two, $three;
+}
