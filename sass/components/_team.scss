@@ -19,7 +19,7 @@
   @media screen and (min-width: $tables_min) {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -30px;
+    margin-left: -30px;
     margin-bottom: -30px;
   }
   @media screen and (min-width: $desktop) {
@@ -35,7 +35,7 @@
   background-color: $white_color;
   margin-bottom: 30px;
   @media screen and (min-width: $tables_min) {
-    margin-right: 30px;
+    margin-left: 30px;
   }
   @media screen and (min-width: $desktop) {
     margin-bottom: 0;
