@@ -124,6 +124,12 @@ button {
   line-height: 1.1666;
   color: #2196f3;
   letter-spacing: 0.03em;
+  -webkit-animation: bounce;
+          animation: bounce;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 @media screen and (min-width: 320px) and (max-width: 1199px) {
@@ -444,7 +450,7 @@ button {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .contact-list__item:last-child .contact-list__link {
     padding-bottom: 20px;
   }
@@ -462,7 +468,7 @@ button {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .phone-number {
     font-size: 32px;
   }
@@ -602,7 +608,7 @@ button {
   background-position: center;
 }
 
-@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 767.98px) and (min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (min-resolution: 192dpi), screen and (max-width: 767.98px) and (min-resolution: 2dppx) {
   .hero {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/background/header-mini@2x.jpg");
     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background/header-mini@2x.jpg");
@@ -1701,7 +1707,6 @@ button {
 .card__text {
   position: absolute;
   height: 100%;
-  overflow-y: auto;
   bottom: 0;
   left: 0;
   padding: 77px 24px;
@@ -1723,6 +1728,12 @@ button {
 .card-set__link:focus .card__text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+@media screen and (max-width: 767.98px) {
+  .card__text {
+    overflow-y: auto;
+  }
 }
 
 .card-meta {

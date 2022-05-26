@@ -6,6 +6,9 @@
   line-height: 1.1666;
   color: $web_hover_button_color;
   letter-spacing: 0.03em;
+  animation: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 
   @media screen and (min-width: 320px) and (max-width: 1199px) {
     font-size: $logo_size;
@@ -30,3 +33,4 @@
 .footer__logo {
   color: $white_color;
 }
+

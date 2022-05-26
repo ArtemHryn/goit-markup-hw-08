@@ -37,7 +37,6 @@
 .card__text {
   position: absolute;
   height: 100%;
-  overflow-y: auto;
   bottom: 0;
   left: 0;
   padding: 77px 24px;
@@ -54,6 +53,9 @@
   .card-set__link:hover &,
   .card-set__link:focus & {
     transform: translateY(0);
+  }
+  @media screen and (max-width: $mobile_max) {
+    overflow-y: auto;
   }
 }
 
