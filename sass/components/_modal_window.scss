@@ -12,6 +12,9 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms $animation, visibility 250ms $animation;
+  @media screen and (orientation: landscape) {
+    overflow-y: auto;
+  }
 }
 .modal {
   position: absolute;
@@ -34,6 +37,9 @@
   @media screen and (min-width: $desktop) {
     max-width: 528px;
     min-height: 581px;
+  }
+  @media screen and (orientation: landscape) {
+    transform: translate(-50%, -30%) scale(1);
   }
 }
 
